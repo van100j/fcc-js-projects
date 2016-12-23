@@ -9,3 +9,4 @@ This is and ongoing project and it will be updated as we move ahead. Follow inst
 ### Examples
 
 * [Build a JS Calculator](https://github.com/van100j/js-react-calculator)
+* [Build a Pomodoro Clock](https://github.com/van100j/pomodoro-clock)
