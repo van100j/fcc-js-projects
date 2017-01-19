@@ -8,6 +8,7 @@ This is and ongoing project and it will be updated as we move ahead. Follow inst
 ## Project Challenges
 
 ### API Projects
+* [Image Search Abstraction Layer](https://github.com/van100j/image-search)
 * [File Metadata Microservice](https://github.com/van100j/file-metadata-microservice)
 * [URL Shortener Microservice](https://github.com/van100j/url-shortener-microservice)
 * [Request Header Parser Microservice](https://github.com/van100j/header-parser-microservice)
