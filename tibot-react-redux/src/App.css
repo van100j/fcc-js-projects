@@ -1,0 +1,123 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font: 14px arial, sans-serif;
+  height: 100%;
+}
+
+#root,
+#root > div {
+  height: 100%;
+}
+
+.msgs {
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  min-height: calc(100% - 90px);
+  padding: 10px 0 80px;
+
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.msgs li {
+  margin: 15px;
+  padding: 15px;
+  background: #efefef;
+  border-radius: 5px;
+  font-weight: 300;
+  max-width:75%;
+  width: auto;
+  line-height: 18px;
+  align-self: flex-end;
+  position: relative;
+}
+
+.msgs li small {
+  position: absolute;
+  color: gray;
+  top: -20px;
+  width: calc(100vw - 60px);
+  right: 0;
+  text-align: right;
+  white-space: nowrap;
+  opacity: 0.5;
+  transition: opacity .2s ease;
+}
+
+.msgs li.bot {
+  background: #6666fe;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.msgs li.bot small {
+  right: auto;
+  left: 0;
+  text-align: left;
+}
+
+.msgs li:hover small {
+  opacity: 1;
+}
+
+.msgs li.bot span.dot {
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  padding: 0 2px;
+
+  animation: typing ease-in-out;
+  animation-duration: .25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.msgs li.bot span.dot:nth-child(2) {
+  animation-delay: .1s
+}
+.msgs li.bot span.dot:nth-child(3) {
+  animation-delay: .2s
+}
+
+.chat-input {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.chat-input-text {
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  border: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-top: 1px solid lightgray;
+  border-radius: 0;
+  outline: 0;
+}
+
+.chat-input-text:focus {
+  box-shadow: 0 0 7px rgba(0, 0, 0, .15)
+}
+
+@keyframes typing {
+  from {
+    transform: translate(0, 0)
+  }
+  to {
+    transform: translate(0, -4px)
+  }
+}

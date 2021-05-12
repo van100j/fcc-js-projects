@@ -1,0 +1,31 @@
+{
+  "name": "tibot-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apiai": "4.0.2",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "helmet": "^3.12.0",
+    "moment": "^2.21.0",
+    "moment-timezone": "^0.5.14",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.1",
+    "react-scripts": "1.1.1",
+    "request": "^2.83.0",
+    "rxjs": "5.1.0",
+    "uuid": "^3.2.1",
+    "ws": "^4.1.0"
+  },
+  "proxy": "http://localhost:8080",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postinstall": "npm run build"
+  }
+}

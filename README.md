@@ -19,6 +19,8 @@ This is and ongoing project and it will be updated as we move ahead. Follow inst
 * [A Voting App](./voting-app/)
 * [Chart the Stock Market](./chart-stock-market/)
 * [Nightlife Coordination App](./nightlife-coordination-app/)
+* [TiBot w/ React](./tibot-react/)
+* [TiBot w/ React and Redux](./tibot-react-redux/)
 
 ### Data Visualization Projects (React + D3.js)
 
