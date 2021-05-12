@@ -1,0 +1,15 @@
+{
+  "name": "header-parser-microservice",
+  "version": "1.0.0",
+  "description": "FCC Request Header Parser Microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vanco Stojkov",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

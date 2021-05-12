@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pomodoro Clock w/ React</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                font-weight: 100;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                position: relative;
+                
+            }
+            
+            .wrapper {
+                position: absolute;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+                margin: auto;
+                background: #3f51b5;
+                
+                padding: 50px 0 0;
+                
+                transition: all .5s ease;
+            }
+            
+            .clock-wrapper {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            
+            .circle {
+                width: 300px;
+                height: 300px;
+                
+                border-radius: 150px;
+                background: rgba(0, 0, 0, .1);
+                position: relative;
+            }
+            
+            .time-display {
+                position: absolute;
+                text-align: center;
+                line-height: 32px;
+                height: 64px;
+                width: 100%;
+                font-size: 32px;
+                color: #fff;
+                
+                top:50%;
+                margin: -37px 0 0;
+            }
+            
+            .time-display span {
+                display:block;
+                padding-bottom: 10px;
+            }
+            
+            .time-display-title {
+                font-size: 24px;
+            }
+            
+            .circle svg {
+                overflow: visible;
+            }
+            
+            .animated-path {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                transition-property: stroke-dashoffset;
+                transition-timing-function: linear;
+            }
+            
+            .control-buttons {
+                width: 300px;
+                text-align: center;
+                padding: 50px 0 0;
+            }
+            
+            .control-buttons svg {
+                width: 48px;
+                cursor: pointer;
+                fill: #fff;
+                display: inline-block
+            }
+            
+            .settings {
+                text-align: center;
+                color:#fff;
+                width:300px;
+                padding: 0 0 50px;
+                font-size: 24px;
+            }
+            
+            .settings-group {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            
+            .settings-button {
+                cursor: pointer;
+                margin: 0 5px;
+                padding: 0 5px;
+                font-size: 24px;
+                background: none;
+                border: 0 none;
+                font-family: 'Roboto', sans-serif;
+                color: #fff;
+                font-weight: 100;
+                outline: 0 none;
+            }
+            
+            .settings-title {
+                font-size: 16px;
+                padding: 0 20px;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+
+        <div id="app"></div>
+      
+        <script src="/static/bundle.js" type="text/javascript"></script>
+  </body>
+</html>

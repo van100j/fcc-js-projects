@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Twitchtv JSON API w/ React</title>
+        
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            html, 
+            body, 
+            #app {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+            body {
+                font-family: arial, sans-serif;
+                font-size: 18px;
+                font-weight: 100;
+                position: relative;
+                font-size: small;
+            }
+            
+            .twitch {
+                max-width: 800px;
+                margin: 42px auto 0;
+            }
+            
+            .twitch-header {
+                position: fixed;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 32px;
+                line-height: 32px;
+                background: #f3f3f3;
+                border-bottom: 1px solid #ccc;
+                opacity: .99;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+            }
+            
+            .twitch-header-wrapper {
+                padding: 0 10px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            .twitch-filter {
+                list-style: none;
+                float: right;
+                margin:0;
+                padding:0;
+                height: 100%;
+            }
+            
+            .twitch-filter li {
+                display: inline-block;
+                margin: 0;
+                padding: 0 10px;
+                cursor: pointer;
+                height: 100%;
+            }
+            
+            .twitch-filter li.active,
+            .twitch-filter li:hover {
+                background: #e5e5e5;
+            }
+            
+            .twitch-stream {
+                padding: 10px;
+                background: #f3f3f3;
+                margin: 10px;
+                border-radius: 2px;
+                border: 1px solid #ccc;
+            }
+            
+            .twitch-stream:hover {
+                background: #e5e5e5;
+            }
+            
+            .twitch-stream img {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 2px 0 rgba(0, 0, 0, .28);
+            }
+            
+            .twitch-details {
+                display: inline-block;
+                width: 90%;
+                width: calc(100% - 100px);
+                padding: 10px;
+            }
+            
+            .updated {
+                font-size: x-small;
+                margin: 0 5px;
+                color: #666;
+            }
+            
+            .twitch-username a {
+                text-decoration: none;
+            }
+            
+            .twitch-description {
+                padding: 10px 0;
+                font-size: 16px;
+            }
+            
+            .twitch-description a {
+                text-decoration: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <div id="app"></div>
+        
+        
+      
+        <script src="/static/bundle.js" type="text/javascript"></script>
+  </body>
+</html>

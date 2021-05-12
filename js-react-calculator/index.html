@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS Calculator w/ React</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: 'Lato', sans-serif;
+                font-size: 18px;
+                padding: 0;
+                margin: 0;
+                position: relative;
+            }
+            
+            .calculator {
+                width: 320px;
+                height: 520px;
+                padding: 120px 0 0;
+                background: #2a2929;
+                position: absolute;
+                box-sizing: border-box;
+                
+                top: 50%;
+                left: 50%;
+                margin: -260px 0 0 -160px;
+            }
+            
+            .display {
+                height: 80px;
+                box-sizing: border-box;
+                padding: 20px 20px 0;
+                font-size: 48px;
+                color: #fff;
+                text-align: right;
+                font-weight: 300;
+                position: absolute;
+                top: 30px;
+                right:0;
+            }
+            
+            .keypad {
+                border-top: 0 none;
+                box-sizing: border-box;
+                width: 100%;
+                height: 401px;
+            }
+            
+            .key {
+                width: 80px;
+                height: 80px;
+                display: block;
+                float: left;
+                background: #e0e0e0;
+                color: #000;
+                line-height: 80px;
+                text-align: center;
+                
+                box-sizing: border-box;
+                
+                cursor: pointer;
+                
+                border: 0 none;
+                border-left: 1px solid #8e8e8e;
+                border-bottom: 1px solid #8e8e8e;
+                
+                font-family: 'Lato', sans-serif;
+                font-size: 32px;
+                font-weight: 100;
+                
+                outline: 0 none;
+            }
+            
+            
+            .key:nth-child(4n),
+            .key:nth-child(19) { border-right: 1px solid #8e8e8e; }
+            
+            
+            .key-function { background: #d6d6d6; }
+            
+            .key-operation {
+                background: #f7a357;
+                color: #fff;
+            }
+            
+            .key-operation.key-active {
+                border-top: 2px solid #8e8e8e;
+                border-left: 2px solid #8e8e8e;
+                border-bottom: 2px solid #8e8e8e;
+            }
+            
+            .key.key-0 {
+                width: 160px;
+                padding-right: 80px;
+            }
+            
+            /* active */
+            .key:active {
+                background: #b2b2b2;
+            }
+            
+            .key-function:active {
+                background: #a9a9a9;
+            }
+            
+            .key-operation:active {
+                background: #c2732f;
+                color: #686868;
+            }
+            
+            @media (min-width:800px) {
+                .calculator {
+                    border-radius: 5px;
+                    box-shadow: 0 10px 50px rgba(0, 0, 0, .25);
+                }
+                
+                .keypad {
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                
+                .key.key-0 {
+                    border-bottom-left-radius: 5px;
+                }
+
+                .key.key-equal {
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        <div id="app"></div>
+      
+        <script src="/static/bundle.js" type="text/javascript"></script>
+  </body>
+</html>

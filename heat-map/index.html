@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Visualiza Data with a Heat Map</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: rgba(0, 0, 0, .1);
+      font-family: arial, sans-serif;
+    }
+    #app {
+      padding: 20px;
+      width: 1084px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .chart-wrapper {
+      width: 1044px;
+      height: 620px;
+      margin: 0 auto;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, .15);
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, .08), 0 2px 2px 0 rgba(0, 0, 0, .18)
+    }
+    .chart {
+
+    }
+
+    .bar {
+      fill: steelblue;
+    }
+
+    .bar:hover {
+      fill: darkred;
+    }
+
+    .axis-month,
+    .tick text {
+      fill: black;
+      font: 10px sans-serif;
+    }
+
+    .axis-title {
+        font-size: 14px;
+    }
+
+    .legend-wrapper .axis path,
+    .legend-wrapper .axis line,
+    .axis--y path,
+    .axis--y line {
+        fill: none;
+        stroke: none;
+    }
+
+    .legend-title {
+      font-size: 10px;
+    }
+
+    .tooltip {
+      position: absolute;
+      opacity:0;
+      padding: 10px;
+      background: rgba(255, 255, 255, .9);
+      border-radius: 2px;
+      font-size: 12px;
+      top: 450px;
+      left:60px;
+      margin: 0 0 0 -25px;
+      border: 1px solid rgba(0, 0, 0, .15);
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, .08), 0 2px 2px 0 rgba(0, 0, 0, .18);
+      text-align: right;
+    }
+
+    .tooltip strong {
+      display: block;
+      font-size: 14px;
+      padding: 0 0 5px;
+    }
+
+    .title {
+      width: 1084px;
+      margin: 0 auto;
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    .title h2 {
+      text-align: center;
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="app">
+      <div class="title">
+        <h2>Monthly Global Land-Surface Temperature</h2>
+      </div>
+      <div class="chart-wrapper">
+        <svg class="chart"></svg>
+      </div>
+      <div class="description"></div>
+    </div>
+
+
+
+    <script src="/static/bundle.js" type="text/javascript"></script>
+</body>
+
+</html>

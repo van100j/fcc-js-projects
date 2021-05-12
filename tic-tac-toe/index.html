@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tic Tac Toe w/ React</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            html, 
+            body,
+            #app {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                background: #f8f8f8;
+            }
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                
+                position: relative;
+            }
+            
+            .tic-tac-toe {
+                width: 480px;
+                margin: 20px auto;
+                background: #3f51b5;
+                border-radius: 2px;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+            }
+            
+            .board {
+                width: 320px;
+                font-size: 0;
+                text-align: center;
+                padding: 40px 10px;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .game-finished {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #3f51b5;
+                
+                color: #fff;
+                line-height: 380px;
+                font-size: 18px;
+                
+                text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+                
+                transition: transform .5s ease;
+                transition: transform .5s cubic-bezier(1,-0.91,0,1.61);
+                
+                transform: scale3d(0, 0, 1);
+                
+            }
+            
+            .game-finished.show {
+                transform: scale3d(1, 1, 1);
+                
+                transition: transform .25s ease .25s;
+                transition: transform .25s cubic-bezier(1,-0.91,0,1.61) .25s;
+            }
+            
+            .cell {
+                font-size: 48px;
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                
+                text-align: center;
+                color: #fff;
+                vertical-align: middle;
+                
+                border-right: 5px solid rgba(0, 0, 0, .25);
+                border-bottom: 5px solid rgba(0, 0, 0, .25);
+            }
+            
+            .cell:nth-child(3n) {
+                border-right: 0 none;
+            }
+            
+            .cell:nth-child(n + 7) {
+                border-bottom: 0 none;
+            }
+            
+            .cell svg {
+                width: 48px;
+                margin: 26px 0;                
+                display: inline-block;
+                fill: #fff;
+                vertical-align: middle;
+            }
+            
+            .cell-x svg {
+                fill: rgba(0, 0, 0, .75);
+            }
+            
+            .cell-o svg {
+                fill: #f5eedc;
+            }
+            
+            .symbols {
+                width:0;
+                height:0;
+                display: none;
+            }
+            
+            .status {
+                width: 100%;
+                padding: 10px;
+                background: #f8f8f8;
+                font-size: small;
+                color: rgba(0, 0, 0, .54);
+            }
+            
+            .status-result {
+                text-align: center;
+                padding: 10px 0;
+                line-height: 24px;
+            }
+            
+            .status-result svg {
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                vertical-align: bottom;
+                fill: rgba(0, 0, 0, .54)
+            }
+            
+            .status-label {
+                text-align: center;
+            }
+            
+            .change-player {
+                cursor: pointer;
+                border-bottom: 1px dotted;
+            }
+            
+            .change-player:hover {
+                border-bottom: 1px solid;
+            }
+            
+            .game-footer {
+                width: 100%;
+                padding: 10px;
+                background: #f8f8f8;
+                text-align: center;
+                font-size: 16px;
+                color: #303f9f;
+                line-height: 24px;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <svg viewBox="0 0 48 48" class="symbols">
+            <path id="symbol-o" d="M24,7C14.627,7,7,14.627,7,24c0,9.375,7.627,17,17,17c9.375,0,17-7.625,17-17C41,14.627,33.375,7,24,7z M24,39 c-8.271,0-15-6.728-15-15c0-8.271,6.729-15,15-15s15,6.729,15,15C39,32.272,32.271,39,24,39z"/>
+            <path id="symbol-x" d="M25.454,24l8.733,8.274l-1.375,1.451L24,25.377l-8.812,8.349l-1.375-1.451L22.546,24l-8.734-8.274l1.375-1.452L24,22.623 l8.812-8.349l1.375,1.452L25.454,24z"/>
+        </svg>
+
+        <div id="app"></div>
+        
+        
+        <script src="/static/bundle.js" type="text/javascript"></script>
+  </body>
+</html>

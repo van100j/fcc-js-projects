@@ -1,0 +1,33 @@
+{
+  "name": "random-quote-machine",
+  "version": "1.0.0",
+  "description": "Free Code Camp Random Quote Machine",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline"
+  },
+  "keywords": [
+    "js",
+    "random",
+    "quote",
+    "machine"
+  ],
+  "author": "Vanco Stojkov <vanco@stojkov.me> (http://stojkov.me)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "install": "^0.8.4",
+    "npm": "^4.0.5",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "devDependencies": {
+    "jquery": "^3.1.1"
+  }
+}

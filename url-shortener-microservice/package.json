@@ -1,0 +1,21 @@
+{
+  "name": "url-shortener-microservice",
+  "version": "1.0.0",
+  "description": "FCC URL Shortener Microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vanco Stojkov",
+  "license": "MIT",
+  "dependencies": {
+    "base62": "^1.1.2",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.7",
+    "valid-url": "^1.0.9"
+  }
+}
