@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>File Metadata Microservice</title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body,
+            #app {
+                padding: 20px 0 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+            body {
+                font-family: arial, sans-serif;
+                font-size: 18px;
+                font-weight: 100;
+                position: relative;
+            }
+
+            .wrapper {
+              position:relative;
+              max-width: 800px;
+              padding: 0 20px;
+              margin: 0 auto;
+              text-align: center;
+            }
+
+
+            .button-holder {
+                margin: 40px 0 0;
+                text-align: center;;
+            }
+
+            .button {
+                background: #fafafa;
+                text-align: center;
+                font-family: arial,sans-serif;
+                font-size: small;
+                text-decoration: none;
+                width: 120px;
+                line-height: 40px;
+                display: inline-block;
+                color: #999;
+                font-weight: normal;
+                border-radius: 1px;
+                border: 0;
+                outline: 0;
+                box-shadow: 0 0 1px 0 rgba(0,0,0,0.18);
+            }
+
+
+            .button:hover {
+                color: #000;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+                cursor: pointer;
+            }
+
+            .button:disabled:hover {
+                color: #999;
+                cursor: default;
+                box-shadow: 0 0 1px 0 rgba(0,0,0,0.18);
+            }
+
+            #form {
+              padding:0;
+              margin:0;
+            }
+
+            /****/
+            .inputfile {
+              width: 0.1px;
+              height: 0.1px;
+              opacity: 0;
+              overflow: hidden;
+              position: absolute;
+              z-index: -1;
+            }
+
+            .box {
+                background-color: #dfc8ca;
+                padding: 6.25rem 1.25rem;
+            }
+
+        </style>
+    </head>
+    <body>
+
+      <div id="app">
+        <h2>File Metadata Microservice</h2>
+        <h4>Choose file and submit it to the API</h4>
+        <p>*<small>files won't be saved on the server</small></p>
+        <div class="wrapper">
+          <form action="/api/filesize" method="post" enctype="multipart/form-data">
+
+            <div class="box">
+    					<input type="file" name="file" id="file" class="inputfile">
+    					<label for="file">
+                <svg width="32" height="32" viewBox="0 0 48 48">
+                  <path d="M41,31.994v12.021H7V31.994h4v8.021h26v-8.021H41z M22,14.255v22.739h4V14.255l5.17,5.816l2.988-2.658L24,5.984 L13.842,17.413l2.988,2.658L22,14.255z"/>
+                </svg>
+                <span>Choose a file…</span>
+              </label>
+    				</div>
+            <div class="button-holder">
+              <button class="button" id="submit-button" type="submit" disabled="disabled">Submit</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+
+      <script src="/static/app.js"></script>
+  </body>
+</html>

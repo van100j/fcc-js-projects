@@ -14,6 +14,12 @@ This is and ongoing project and it will be updated as we move ahead. Follow inst
 * [Request Header Parser Microservice](./header-parser-microservice/)
 * [Timestamp Microservice](./timestamp-microservice/)
 
+### Fullstack Projects
+* [File Metadata Microservice](./file-metadata-microservice/)
+* [A Voting App](./voting-app/)
+* [Chart the Stock Market](./chart-stock-market/)
+* [Nightlife Coordination App](./nightlife-coordination-app/)
+
 ### Data Visualization Projects (React + D3.js)
 
 #### D3.js

@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  min-height:100%;
+  position: relative;
+}
+
+body {
+  padding-bottom: 220px;
+}
+
+.title {
+  margin: 50px 0 25px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.badge-default {
+  color: #636c72;
+  border: 1px solid #636c72;
+  background-color: transparent;
+}
+
+/** modal **/
+.modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, .5);
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-dialog {
+  margin-top: 60px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    margin-top: 60px;
+  }
+}
+
+.modal-header {
+  background-color: #f7f7f9;
+}
+
+.modal-body {
+  min-height: 125px;
+}
+
+.loader {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(/assets/loader.gif) center no-repeat;
+  background-size: 25px;
+}

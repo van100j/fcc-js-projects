@@ -1,0 +1,44 @@
+<div class="container stock-container">
+  <div [ng2-highstocks]="options"></div>
+  <div class="alert alert-danger mt-3" role="alert" *ngIf="error">
+    <button type="button" class="close" aria-label="Close" (click)="onClearError()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ error }}
+  </div>
+
+  <form [formGroup]="stockForm" (ngSubmit)="onStockAdd()">
+    <div class="form-group row">
+      <div class="col-md-8 mt-3">
+        <input type="text" placeholder="Stock Symbol, ex. MSFT" id="symbol" class="form-control" formControlName="symbol">
+      </div>
+      <div class="col-md-4 mt-3 mb-3 text-right">
+        <span class="loader" *ngIf="loading"></span>
+        <button type="submit" class="btn btn-primary" [disabled]="!stockForm.valid">Add Symbol</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-info empty-stocks" role="alert" *ngIf="stocks && !stocks.length">
+    <h5 class="alert-heading">Please add stock symbol to see the chart!</h5>
+    <p>
+      For example, you may try <strong>MSFT</strong> to see Microsoft's, or <strong>FB</strong> to see Facebook's stocks.
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let stock of stocks; let i = index">
+      <div class="card stock mb-4">
+        <h3 class="card-header" [ngStyle]="{color: options.colors[i%options.colors.length]}">
+          {{ stock.dataset_code }}
+          <button type="button" class="close" aria-label="Remove" (click)="onStockRemove(stock.dataset_code)">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </h3>
+        <div class="card-block">
+          <p class="card-text" [title]="stock.name">{{ stock.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

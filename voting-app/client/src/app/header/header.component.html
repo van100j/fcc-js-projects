@@ -1,0 +1,37 @@
+<header>
+  <nav class="navbar navbar-toggleable-sm navbar-inverse bg-primary">
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarNav" [attr.aria-expanded]="menuExpanded" aria-label="Toggle navigation" (click)="menuExpanded=!menuExpanded">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/">Voting App</a>
+      <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{'show': menuExpanded}">
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="polls">Polls</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" *ngIf="loggedIn()">
+          <li class="nav-item dropdown" appMenuToggler>
+            <a class="nav-link dropdown-toggle" role="button">Manage</a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" routerLink="manage/polls">Your Polls</a>
+              <a class="dropdown-item" routerLink="account">Account</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="cursor: pointer;" (click)="onLogout()">Logout</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" *ngIf="!loggedIn()">
+          <li class="nav-item dropdown" appMenuToggler>
+            <a class="nav-link dropdown-toggle" role="button">Get Started</a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" routerLink="login">Login</a>
+              <a class="dropdown-item" routerLink="signup">Sign Up</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+  </nav>
+</header>
